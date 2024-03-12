@@ -15,6 +15,16 @@ createApp({
       counter: 0
     }
   },
-
+  methods:{
+    goNext(isNext){
+      isNext ? this.counter++ : this.counter--;
+      if(this.counter > this.images.length -1){
+        this.counter = 0
+      }else if(this.counter < 0){
+        this.counter = this.images.length -1;
+      }
+    }
+  },  
+  
 
 }).mount('#app')
