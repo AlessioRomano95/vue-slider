@@ -18,8 +18,8 @@
         <img class="" :src="images[counter]" alt="">
       </div>
 
-      <div class="btn-chev top"><i class="fa-solid fa-chevron-up"></i></div>
-      <div class="btn-chev bottom"><i class="fa-solid fa-chevron-down"></i></div>
+      <div class="btn-chev top" @click="goNext(false)"><i class="fa-solid fa-chevron-up"></i></div>
+      <div class="btn-chev bottom" @click="goNext(true)"><i class="fa-solid fa-chevron-down"></i></div>
 
 
     </div>

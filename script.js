@@ -12,7 +12,8 @@ createApp({
         'img/04.webp',
         'img/05.webp',
       ],
-      counter: 0
+      counter: 0,
+      isPlayerActive: true
     }
   },
   methods:{
@@ -25,6 +26,13 @@ createApp({
       }
     }
   },  
-  
+  mounted(){
+    setInterval(() => { 
+      if(this.isPlayerActive){
+        this.goNext(this.forward);
+
+      }
+    }, 3000);
+  }
 
 }).mount('#app')
